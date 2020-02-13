@@ -9,8 +9,8 @@ RUN pip install \
   matplotlib \
   ;
 
-ADD .startup.py /
+COPY .startup.py /
 
-ADD ./docker-entrypoint.sh /
+COPY ./docker-entrypoint.sh /
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
